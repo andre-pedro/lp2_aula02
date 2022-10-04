@@ -17,11 +17,19 @@ namespace ClassVsStruct
             Console.WriteLine("HP do P1: " + p1.Health + "Armor do P1: " + p1.Armor);
             Console.WriteLine("HP do P2: " + p2.Health + "Armor do P2: " + p2.Armor);
 
-            p1.Armor = 11;
-            p2.Armor = 66;
+            DupHealth(ref p1);
 
             Console.WriteLine("HP do P1: " + p1.Health + "Armor do P1: " + p1.Armor);
-            Console.WriteLine("HP do P2: " + p2.Health + "Armor do P2: " + p2.Armor)
+            Console.WriteLine("HP do P2: " + p2.Health + "Armor do P2: " + p2.Armor);
+
+
         }
+
+        private static void DupHealth(ref Player player)
+        {
+            player.Health *= 2;
+        }
+
+
     }
 }
